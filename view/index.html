@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Pesquisa</title>
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AC Pesquisa</title>
+        <link rel="stylesheet" href="../public/stylesheets/style.css">
+        <script src="../public/Javascript/dropdown.js"></script>
+        
+    </head>
+    
+    
+    <header class=" header-container">
 
-<header class=" header-container">
-
-    <div class="menu-content" id="menu">
-
-        <ul class="nav">
-            <li>
-                <a href="#">HOME</a>
-            </li>
-            <li>
-                <a href="#">QUEM SOMOS</a>
-            </li>
-            <li>
-                <a href="#">SOLUÇÕES</a>
-            </li>
-            <li>
-                <a href="#">BLOG</a>
-            </li>
-
-            <li>
-                <a href="#">CONTATO</a>
-            </li>
-        </ul>
-
-    </div>
-
-
+        
     <nav class="navbar">
         <a href="#">
             <i class="logo">
                 <img src="/public/images/logo-acpesquisa-web.png">
             </i>
         </a>
-        <button class="btn-nav" type="button" data-toggle="collapse" data-target="#menu"
-            aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
 
-            <i class="list">
-                <img src="/public/images/svg/menu.svg">
-            </i>
+        <button class="nav-button">
+            <input id="drop-menu" type="checkbox" name="menu" />
+            <label for="drop-menu"><img src="/public/images/svg/menu.svg"></label>
+            <ul class="submenu">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">QUEM SOMOS</a></li>
+              <li><a href="#">SOLUÇÕES</a></li>
+              <li><a href="#">BLOG</a></li>
+              <li><a href="#">CONTATO</a></li>
+            </ul>
 
         </button>
 
@@ -56,6 +41,8 @@
 
 
 <body>
+
+
     <div class="background-blue">
         
         <div class="container-first">
