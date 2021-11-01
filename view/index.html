@@ -22,7 +22,7 @@
         </a>
 
         <button class="nav-button">
-            <input id="drop-menu" type="checkbox" name="menu" />
+            <input class="nav-input" id="drop-menu" type="checkbox" name="menu" />
             <label for="drop-menu"><img src="/public/images/svg/menu.svg"></label>
             <ul class="submenu">
               <li><a href="#">HOME</a></li>
@@ -36,6 +36,16 @@
 
     </nav>
 
+    <div class="header-pc">
+
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">QUEM SOMOS</a></li>
+    <li><a href="#">SOLUÇÕES</a></li>
+    <li><a href="#">BLOG</a></li>
+    <li><a href="#">CONTATO</a></li>
+  </ul>
+
+</div>
 
 </header>
 
@@ -45,7 +55,7 @@
 
     <div class="background-blue">
         
-        <div class="container-first">
+        <!-- <div class="container-first"> -->
         <h2>Isso é AC!</h2>
 
         <p>
@@ -53,18 +63,17 @@
             a <b>AC Pesquisa</b> conta com vasta experiência no segmento de pesquisas para <b>Shopping Centers, varejo, comércio, real estate e indústrias.</b>
             Atua em parceria com equipes multidisciplinares e parceiros em todos os estados do Brasil e América do Sul. 
         </p>
-        </div>
+        <!-- </div> -->
         <button class="btn-blue">
             <b>SAIBA MAIS</b>
         </button> 
 
-        <div class="img-container-first">
-            <img src="../public/images/banner-home.png" width="400px" height="400px" alt="">
-            </div>
+        <!-- <div class="img-container-first"> -->
+            <img class="banner" src="../public/images/imagem-banner.png">
+            <!-- </div> -->
     
     </div>
-
-
+    
 
     <article class="container-base">
         <h2>Suas dúvidas acabam agora...</h2>
@@ -133,25 +142,77 @@
         </button>
     </article>
 
-    <article class="container-blog">
-        <h2> BLOG AC</h2>
+    <section class="container-blog">
+        <dl class="content-blog">
+          <img class="img-fluid" src="../public/images/post-1-diminuiram-as-visitas.jpg" alt="post-1" />
 
-        <div class="blog-content">
+          <dt class="blog-title">E todo mundo virou Instituto de pesquisa</dt>
 
-            <div>
-                <img src="../public/images/post-1-diminuiram-as-visitas.jpg" alt="Diminuiram as Visitas">
-                <p> E todo mundo virou instituto de Pesquisa.</p>
-            </div>
+          <div class="footer-card">
 
-            <div>
-                <img src="../public/images/post-2-delivery-de-shopping.jpg" alt="Delivery de Shopping">
-                <p> E todo mundo virou instituto de Pesquisa.</p>
-            </div>
+            <button type="button">
+            </button>
+            <img src="../public/images/svg/eye.svg" alt="">
 
-            <div>
-                <img src="../public/images/post-3-sobre-o-tempo-de-permanencia.jpg" alt="O tempo de permanência">
-                <p> E todo mundo virou instituto de Pesquisa.</p>
-            </div>
+            <span>Escreva um comentário</span>
+
+            <button type="button">
+            </button>
+            <img src="../public/images/svg/hearth.svg" alt="">
+
+          </div>
+
+        </dl>
+
+        <dl class="content-blog">
+          <img src="../public/images/post-2-delivery-de-shopping.jpg" alt="post-2" />
+
+          <dt class="blog-title">Consumidor pós-crise: já está tudo mudado.</dt>
+
+          <div class="footer-card">
+
+            <button type="button">
+            </button>
+            <img src="../public/images/svg/eye.svg" alt="">
+
+            <span>Escreva um comentário</span>
+
+            <button type="button">
+            </button>
+            <img src="../public/images/svg/hearth.svg" alt="">
+
+          </div>
+
+        </dl>
+
+        <dl class="content-blog">
+          <img src="../public/images/post-3-sobre-o-tempo-de-permanencia.jpg" alt="post-3" />
+
+          <dt class="blog-title">Probabilidade dos cenários improváveis.</dt>
+
+        <div class="footer-card">
+
+            <button type="button">
+            </button>
+            <img src="../public/images/svg/eye.svg" alt="">
+
+            <span>Escreva um comentário</span>
+
+            <button type="button">
+            </button>
+            <img src="../public/images/svg/hearth.svg" alt="">
+
+          </div>
+
+        </dl>
+      </section>
+
+
+
+
+
+ 
+    </section>
 
         </div>
     </article>
@@ -174,29 +235,48 @@
         </form>
     </article>
 
-    <footer>
 
-        <div class="image-footer">
-        <img src="../public/images/logo-footer.png" width="150px" height="auto" alt="">
-        <h4> © 2021 AC Pesquisa - All Rights Reserved</h4>
-        </div>
-
-        <div>
-        <h2>
-            Rua Vinte e Três de Outubro, 25 Ferreira - São Paulo/SP <br>
-            CEP: 05523-020
-        </h2>
-        
-    </div>
-
-    <div class="social-icons">
-        <img src="../public/images/facebook-fale-conosco-icon.png" alt="">
-        <img src="../public/images/linkedin-fale-conosco-icon.png" alt="">
-        <img src="../public/images/instagram-fale-conosco-icon.png" alt="">
-
-
-    </div>
-    </footer>
+    <footer >
+        <div class="logo-reserved">
+            <img class="logo-footer" src="../public/images/logo-footer.png" alt="logo-footer" />
+            <h6 class="reserved">©️ 2021 AC Pesquisa - All Rights Reserved</h6>
+          </div>
+    
+          <div class="link-footer">
+            <ul >
+              <li>
+                <a href="#">HOME</a>
+              </li>
+              <li>
+                <a href="#">QUEM SOMOS</a>
+              </li>
+              <li>
+                <a href="#">SOLUÇÕES</a>
+              </li>
+              <li>
+                <a href="#">BLOG</a>
+              </li>
+              <li>
+                <a href="#">CONTATO</a>
+              </li>
+            </ul>
+          </div>
+    
+    
+          <div class="address-icons">
+            
+            <h6 class="address">
+              Rua Vinte e Três de Outubro, 25 Ferreira - São Paulo/SP <br />
+              CEP: 05523-020
+            </h6>
+    
+            <div class="icons">
+              <img src="../public/images/facebook-fale-conosco-icon.png" alt="" />
+              <img src="../public/images/linkedin-fale-conosco-icon.png" alt="" />
+              <img src="../public/images/instagram-fale-conosco-icon.png" alt="" />
+            </div>
+          </div>
+        </footer>
 
 </body>
 </html>

@@ -13,12 +13,16 @@ article{
 
    /* Nav */
 
+   .header-pc{
+       display: none;
+   }
+
    .nav-button{
     background-color: transparent;
     border: none;
    }
 
-  input, ul.submenu {
+  .nav-input, ul.submenu {
     display: none;
     list-style:none;
     text-decoration: none;
@@ -27,7 +31,7 @@ article{
     
   }
   
-  /*position the label*/
+
   label {
     position: relative;
     display: block;
@@ -38,15 +42,16 @@ article{
 
 }
   
-  input:checked~ul.submenu {
+  .nav-input:checked~ul.submenu {
     display: block;
     position: absolute;
     z-index: 50;
     
   }
 
-  .submenu li{
-      
+  .submenu li> a{
+      font-size: 15px;
+    color: white;
   }
 
 
@@ -91,10 +96,36 @@ article{
 
 /* IMAGE HEADER */
 
+
 .background-blue{
     position: relative;
     height: 591px;
     background-image: linear-gradient( to bottom, #2571ae , #3ea0ce, #3ea0ce, transparent ) ;
+  }
+
+  .background-blue > img{
+    z-index: 0;
+    position: absolute;
+    transform: translate(0%, -20%);
+    right: 0;
+    left: 0;
+  }
+
+  @media screen and ( min-width: 768px) {
+
+    .background-blue > img{
+    transform: translate(0%, -40%);
+    }
+
+  }
+      
+  @media screen and ( min-width: 768px) {
+    .background-blue > img{
+        transform: translate(0%, -60%);
+        }
+    .middle-photo img{
+        height: 0%;
+    }
   }
 
 
@@ -112,6 +143,12 @@ article{
     z-index: -1;
 }
 
+.banner{
+    max-width: 100%;
+    height: auto;
+
+}
+
 .background-blue h2{
     color: white;
     padding-left: 1rem;
@@ -121,6 +158,7 @@ article{
 }
 
 .background-blue p{
+    z-index: 100;
     color: white;
     letter-spacing: 1px;
     line-height: 1.3;
@@ -151,7 +189,7 @@ article{
 .card img{
     display: block;
     margin-left: auto;
-    margin-right: auto ;
+    margin-right: auto 
 }
 
 .card h3{
@@ -216,19 +254,14 @@ article{
 
 /* BLOG AC */
 
-.container-blog{
-    display: block;
 
-}
 
 .container-blog h2{
     text-align: center;
     padding-bottom: 10%;
+    padding-top: 5%;
 }
 
-.container-blog div div {
-   
-}
 
 .blog-content div > p{
     border-left: black 1px solid;
@@ -237,11 +270,6 @@ article{
     padding-bottom: 5px;
 }
 
-.container-blog div div img {
-    width: 135px;
-    height: auto;
-    border-bottom: black 1px solid;
-}
 
 .blog-content{
     display: grid;
@@ -252,9 +280,6 @@ article{
 
 /* FORM CONTATO */
 
-.container-contact{
-
-}
 
 .container-contact h2{
     font-weight: 600;
@@ -324,28 +349,103 @@ footer h2 {
     height: auto;
 }
 
-@media screen and (min-width:994px) {
-
-
-    /* HEADER */
-.list{
+.container-blog{
     display: none;
 }
 
-.menu-content{
-    float: right;
-
+footer{
+    display: flex !important;
 }
 
-.nav li > a {
+.link-footer{
+    margin-top: 5rem;
+
+    flex-grow: 1;
+  
+  }
+  
+  .link-footer > a{
     color: white;
+    list-style: none;
+  }
+
+  ul{
+      list-style: none;
+  }
+
+  .logo-reserved{
+
+    flex-grow: 1;
+    max-width: 100%;
+    margin-top: 5rem;
+   
 }
+
+.reserved{
+  margin-top: 1rem;
+  font-size: 8px !important;
+  color: white;
+}
+
+.address-icons{
+  -ms-flex-preferred-size: 0;
+
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-top: 5rem;
+    /* padding: 0; */
+}
+
+.address{
+  font-size: 12px !important;
+  font-weight: 600;
+  color: white;
+}
+
+.logo-footer{
+  width: 10rem;
+}
+
+.icons > img{
+  margin-top: 1rem;
+  width: 50px;
+  height: auto;
+}
+
+ul{
+    display: none;
+}
+
+@media screen and (min-width:994px) {
+
+    header{
+        display: flex;
+    }
+
+    /* HEADER */
+.nav-button{
+    display: none;
+}
+
+.header-pc{
+    display: flex;
+    list-style: none;
+    text-align: end;
+    justify-content: right;
+    padding-left: 14vh;
+}
+
+.header-pc  li>a{
+    display: flex;
+    color: white;
+    padding: 20px;
+}
+
 
 /* PRIMEIRO BLOCO DESK */
 
-.container-first{
 
-}
 
 .container-first p{
     width: 400px;
@@ -383,7 +483,7 @@ display: inline-block;
     position: absolute;
     transform: translate(120%, 0px);
     max-height: 100%;
-    height: 88%;
+    height: 50%;
     width: 35%;
 }
 
@@ -405,4 +505,62 @@ display: inline-block;
     margin-top: 20px;
     padding: 7px 70px;
 }
+
+.name,
+.email,
+.assunto{
+    width: 50%;
+    align-self: center;
+}
+
+form input[type="submit"] {
+   width: 20%;
+   align-self: center;
+}
+
+.content-blog>img{
+    width: auto;
+  }
+  .container-blog{
+    flex-flow: row nowrap;
+    display: flex;
+    margin-right: 5%;
+    margin-left: 5%;
+    flex: 1 0 0%;
+  }
+
+
+  .content-blog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+    margin: 1.5rem !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  
+  .content-blog>img {
+    width: 15rem;
+  }
+  
+
+/* FOOTER */
+
+ul{
+    display: block;
+}
+ 
+ul li > a{
+    color: white;
+ 
+}
+
+
 }
