@@ -11,13 +11,12 @@ article{
     display: block;
 }
 
-
    /* Nav */
-   .bg-blue {
+   .header-container {
     background-image: linear-gradient(to bottom, #132433, #2571ae, #2571ae);
   }
   
-  .hamburger {
+  .btn-nav {
     background-color: transparent;
     width: 40px;
     border: none;
@@ -59,7 +58,7 @@ article{
   }
 
 
-.img-teste{
+.img-container-first{
     width: 285px;
     position: absolute;
     height: 202px;
@@ -67,10 +66,10 @@ article{
 
 }
 
-.img-teste img{
-    height: 367px;
-    width: auto;
-    transform: translate(-31%, -8px);
+.img-container-first img{
+    transform: translate(-20%, 26px);
+    position: absolute;
+    z-index: -1;
 }
 
 .background-blue h2{
@@ -128,7 +127,7 @@ article{
 
 .container-base h2 {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 6rem;
     padding-bottom: 10px;
 }
 
@@ -142,10 +141,12 @@ article{
 }
 
 .middle-photo img{
-    width: 125%;
-    height: 400px;
+    width: 320px;
+    height: 350px;
     transform:translate(-46px, 10px);
     padding-bottom: 10%;
+    padding-left: 60px;
+    object-fit: cover;
 }
 
 .middle-photo h2{
@@ -203,7 +204,7 @@ article{
 .blog-content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 1px;
     padding-bottom: 15%;
 }
 
@@ -279,4 +280,10 @@ footer h2 {
 .social-icons img{
     width: 50px;
     height: auto;
+}
+
+@media screen and (min-width:994px) {
+
+
+    
 }
