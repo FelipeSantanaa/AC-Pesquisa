@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 article{
@@ -111,23 +112,6 @@ article{
     left: 0;
   }
 
-  @media screen and ( min-width: 768px) {
-
-    .background-blue > img{
-    transform: translate(0%, -40%);
-    }
-
-  }
-      
-  @media screen and ( min-width: 768px) {
-    .background-blue > img{
-        transform: translate(0%, -60%);
-        }
-    .middle-photo img{
-        height: 0%;
-    }
-  }
-
 
 .img-container-first{
     width: 285px;
@@ -205,7 +189,7 @@ article{
 
 .container-base h2 {
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 2rem;
     padding-bottom: 10px;
 }
 
@@ -216,21 +200,24 @@ article{
 /* MIDDLE PHOTO */
 
 .middle-photo{
-    margin-left: 15px;
-    margin-right: 15px;
+    display: inline-block;
+    /* height: 320px; */
+    width: auto;
 }
 
 .middle-photo img{
-    width: 320px;
+    width: 64vh;
     height: 350px;
-    transform:translate(-46px, 10px);
     padding-bottom: 10%;
-    padding-left: 60px;
+    padding-left: 3.5rem;
     object-fit: cover;
+    border-bottom-left-radius: 10rem;
+
 }
 
 .middle-photo h2{
-    padding-left: 30px;
+    text-align: -webkit-center;
+    padding-bottom: 1rem;
 }
 
 .middle-photo p {
@@ -279,10 +266,19 @@ article{
 }
 
 /* FORM CONTATO */
+.container-contact{
+    background-image: url('../images/bg-formulario.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+
+
+}
 
 
 .container-contact h2{
     font-weight: 600;
+    margin-top: 3rem;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -299,6 +295,7 @@ article{
     margin-top: 8px;
     margin-bottom: 8px;
     border-radius: 8px;
+    padding:6px
 }
 
 form input[type="submit"] {
@@ -358,15 +355,19 @@ footer{
 }
 
 .link-footer{
-    margin-top: 5rem;
-
+    margin-top: 3rem;
     flex-grow: 1;
   
   }
   
-  .link-footer > a{
+  .link-footer > ul > li > a{
     color: white;
-    list-style: none;
+     text-decoration: none;
+  }
+
+  .link-footer ul>li{
+      margin-top: 0.5rem;
+       text-decoration: none;
   }
 
   ul{
@@ -417,6 +418,36 @@ ul{
     display: none;
 }
 
+
+    /* TABLET */
+  
+  @media screen and ( min-width: 768px) {
+    .background-blue > img{
+        transform: translate(0, -30%);
+    }
+    .container-base,
+    .middle-photo,
+    .container-contact{
+        max-width: 100%;
+        width: 95%;
+    }
+    .middle-photo img{
+        padding-left: 5rem;
+        border-bottom-left-radius: 12rem;
+        width: 70vh !important;
+    }
+
+    .name,
+    .email,
+    .assunto{
+        max-width: 100%;
+        width: 80%;
+        align-self: center;
+    }
+  }
+
+/* DESKOP */
+
 @media screen and (min-width:994px) {
 
     header{
@@ -445,7 +476,15 @@ ul{
 
 /* PRIMEIRO BLOCO DESK */
 
+.banner{
+    transform:translate(0px, -60%) !important
 
+}
+
+.background-blue p{
+    width: 50%;
+    height: auto;
+}
 
 .container-first p{
     width: 400px;
@@ -470,6 +509,7 @@ margin: 0px 150px;
 .container-card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 3rem;
 }
 
 /* MIDDLE PHOTO */
@@ -481,15 +521,16 @@ display: inline-block;
 .middle-photo img{
     display: flex;
     position: absolute;
-    transform: translate(120%, 0px);
+    transform: translate(66%, 0px);
     max-height: 100%;
-    height: 50%;
-    width: 35%;
+    height: 70%;
+    width: 35%
 }
 
 .middle-photo h2{
-    text-align: center;
-    padding: 15px 0px;
+    text-align: initial;
+    padding: 1rem 3rem;
+    margin-bottom: 3rem;
 }
 
 .middle-photo p{
@@ -502,8 +543,15 @@ display: inline-block;
 }
 
 .btn-blue-center{
+    float: left;
     margin-top: 20px;
     padding: 7px 70px;
+    margin-left: 6%;
+}
+
+.container-contact{
+    width: auto;
+    margin: auto;
 }
 
 .name,
@@ -563,4 +611,7 @@ ul li > a{
 }
 
 
+
+
 }
+
